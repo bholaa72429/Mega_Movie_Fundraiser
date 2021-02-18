@@ -15,6 +15,7 @@ def not_blank(question, error_message):
         else:
             print(error_message)
 
+
 # ********** Main Routine **********
 
 # Set up dictionaries / lists needed to hold data
@@ -23,6 +24,7 @@ def not_blank(question, error_message):
 
 # Loop to get ticket details
         # start of loop
+
 
 # initialise loop so that it runs at least once
 name = ""
@@ -40,6 +42,7 @@ while name != "xxx" and count < MAX_TICKETS:
             print("*** There is ONE seat left!! ***")
 
         # Get details ...
+
         # Get name (can't be blank)
         name = not_blank("Name:", "Sorry - this can't be blank, please enter your name")
         count += 1
@@ -53,6 +56,7 @@ else:
               .format(count, MAX_TICKETS - count))
 
     # Get age (between 12 and 130)
+
 
     # Calculate ticket price
 
