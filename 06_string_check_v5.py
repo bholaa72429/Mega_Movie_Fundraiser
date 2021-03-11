@@ -1,23 +1,24 @@
 import re
 
 
-# Function goes her
+# Function goes here
 def string_check(choice, options):
 
+    is_valid = "yes"
+    chosen = ""
     for var_list in options:
 
-         # if the snack  is in one of the lists, return the full
+        # if the snack  is in one of the lists, return the full
         if choice in var_list:
 
             # Get full name of snacks abd put it
-            # in title case so it looks nic when outputted
+            # in title case so it looks nice when outputted
             chosen = var_list[0].title()
             is_valid = "yes"
             break
         # if the chosen option is not valid, set is_valid to no
         else:
             is_valid = "no"
-
 
     # if the snack is not OK - ask question again.
     if is_valid == "yes":
@@ -33,10 +34,11 @@ number_regex = "^[1-9]"
 # valid options for each snacks <full name, letter code (a -e)
 # , and possible abbreviations etc>
 valid_snacks = [
-    ["popcorn", "p", "corn", "a"],
+    ["popcorn", "p", "pop", "corn", "a"],
     ["M&M's", "m&m's", "mms", "m", "b"],    # first item is M&M
     ["pita chips", "chips", "pc", "pita", "c"],
-    ["water", "w", "d"]
+    ["water", "w", "d"],
+    ["orange juice","oj","o","juice", "e"],
 ]
 
 yes_no = [
@@ -51,7 +53,11 @@ snack_order = []
 check_snack = "invalid choice"
 while check_snack == "invalid choice":
     want_snack = input("Do you want to order snacks ?").lower()
+
     check_snack = string_check(want_snack, yes_no)
+
+    if check_snack == "invalid choice":
+        print("Please enter yes / no " )
 
 # If they say yes, ask what snacks they want (and add to our snacks)
 if check_snack == "Yes":
@@ -77,6 +83,9 @@ if check_snack == "Yes":
 
         # check if snack is valid
         snack_choice = string_check(desired_snack, valid_snacks)
+
+        if snack_choice == "invalid choice":
+            print("Please enter a valid option ")
 
 
         # check snack amount is valid (less than 5)
