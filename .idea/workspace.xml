@@ -21,10 +21,25 @@
       <file leaf-file-name="00_MMF_base_v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/00_MMF_base_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1462">
-              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+            <state relative-caret-position="442">
+              <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="95" selection-end-column="35" />
               <folding>
                 <element signature="e#121#393#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="00_MMF_base_v2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/00_MMF_base_v2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+              <folding>
+                <element signature="e#20#29#0" expanded="true" />
+                <element signature="e#149#421#0" expanded="false" />
+                <element signature="e#487#1126#0" expanded="false" />
+                <element signature="e#1608#2081#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="06_string_check_v7.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="06_string_check_v7.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_string_check_v7.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="841">
@@ -97,16 +112,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="03_number_checker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_number_checker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -149,6 +154,7 @@
         <option value="$PROJECT_DIR$/06_string_check_v5.py" />
         <option value="$PROJECT_DIR$/06_string_check_v6.py" />
         <option value="$PROJECT_DIR$/06_string_check_v7.py" />
+        <option value="$PROJECT_DIR$/00_MMF_base_v2.py" />
       </list>
     </option>
   </component>
@@ -518,13 +524,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01_name_not_blank_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03_number_checker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -838,16 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/00_MMF_base_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-          <folding>
-            <element signature="e#121#393#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06_string_check_v3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -902,6 +891,29 @@
           <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
           <folding>
             <element signature="e#73#679#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00_MMF_base_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="95" selection-end-column="35" />
+          <folding>
+            <element signature="e#121#393#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00_MMF_base_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+          <folding>
+            <element signature="e#20#29#0" expanded="true" />
+            <element signature="e#149#421#0" expanded="false" />
+            <element signature="e#487#1126#0" expanded="false" />
+            <element signature="e#1608#2081#0" expanded="false" />
           </folding>
         </state>
       </provider>
