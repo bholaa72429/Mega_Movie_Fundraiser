@@ -26,6 +26,7 @@ def string_check(choice, options):
     else:
         return "invalid choice"
 
+
 # Get list of snacks
 def get_snack():
     # regular expression to find if item starts with a number
@@ -46,28 +47,6 @@ def get_snack():
     # holds snack order for a single user.
     snack_order = []
 
-
-yes_no = [
-    ["yes", "y"],
-    ["no", "n"]
-]
-
-# holds snack order for a single user.
-snack_order = []
-
-# ask user if they want a snack
-check_snack = "invalid choice"
-while check_snack == "invalid choice":
-    want_snack = input("Do you want to order snacks ? ").lower()
-
-    check_snack = string_check(want_snack, yes_no)
-
-    if check_snack == "invalid choice":
-        print("Please enter yes / no " )
-
-# If they say yes, ask what snacks they want (and add to our snacks)
-if check_snack == "Yes":
-
     desired_snack = ""
     while desired_snack != "xxx":
 
@@ -77,7 +56,7 @@ if check_snack == "Yes":
         desired_snack = input("Snack: ").lower()
 
         if desired_snack == "xxx":
-            break
+            return snack_order
 
         # if item has a number, separate it into two (number / item)
         if re.match(number_regex, desired_snack):
@@ -96,12 +75,10 @@ if check_snack == "Yes":
         if snack_choice == "invalid choice":
             print("Please enter a valid option ")
 
-
         # check snack amount is valid (less than 5)
         if amount >= 5:
             print("Sorry - we have a four snack maximum")
             snack_choice = "invalid choice"
-
 
         # add snack AND amount to list...
 
@@ -112,9 +89,36 @@ if check_snack == "Yes":
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             snack_order.append(snack_row)
 
+
+
+# Main Routine goes here
+
+# valid options for yes / no question
+yes_no = [
+    ["yes", "y"],
+    ["no", "n"]
+]
+
+# ask user if they want a snack
+check_snack = "invalid choice"
+while check_snack == "invalid choice":
+    want_snack = input("Do you want to order snacks ? ").lower()
+
+    check_snack = string_check(want_snack, yes_no)
+
+    if check_snack == "invalid choice":
+        print("Please enter yes / no " )
+
+# If they say yes, ask what snacks they want (and add to our snacks)
+if check_snack == "Yes":
+    get_order = get_snack()
+
+else:
+    get_order =[]
+
 # Show snack order
 print()
-if len(snack_order) == 0:
+if len(get_order) == 0:
     print("Snacks Ordered: None")
 
 else:
@@ -123,7 +127,8 @@ else:
     '''for item in snack_order:
         print(item)'''
 
-    print(snack_order)
+    print(get_order)
+
 
 
 
