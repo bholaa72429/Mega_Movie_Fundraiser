@@ -101,7 +101,7 @@ all_tickets = []
 # Data Frame Dictionary
 movie_data_dict = {
     'Name': all_name,
-    'Ticket':all_tickets
+    'Ticket': all_tickets
 }
 
 # Ask user if they have ujsed the program before & show instruction
@@ -131,7 +131,18 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         ticket_count += 1
         ticket_sales += ticket_cost
 
+        # add name and ticket price to lists
+        all_name.append(name)
+        all_tickets.append(ticket_cost)
+
+
 # End of tickets loop
+
+
+# Print details...
+movie_frame = pandas.DataFrame(movie_data_dict)
+print(movie_frame)
+
 
 # calculate ticket profit...
 ticket_profit = ticket_sales - (5 * ticket_count)
