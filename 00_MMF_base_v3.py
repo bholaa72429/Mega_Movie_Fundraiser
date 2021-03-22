@@ -167,3 +167,20 @@ else:
     # ask for payment method (and apply surchange if necesary)
 
 # calculate total sales and profit
+
+# initialise loop so that it runs at least once
+MAX_TICKETS = 5
+
+name = ""
+ticket_count = 0
+ticket_sales = 0
+
+# Initialise lists (to make data-frame in due course)
+all_name = []
+all_tickets = []
+
+# Data Frame Dictionary
+movie_data_dict = {
+    'Name': all_name,
+    'Ticket': all_tickets
+}
