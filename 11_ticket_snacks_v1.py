@@ -15,6 +15,7 @@ snack_lists = [popcorn,mms, pita_chips, water, orange_juice]
 
 # Data Frame Dictionary
 movie_data_dict = {
+    'Ticket': all_tickets,
     'Name': all_name,
     'Popcorn': popcorn,
     'Water': water,
@@ -78,7 +79,10 @@ movie_frame["Sub Total"] = \
     movie_frame['M&Ms']*price_dict['M&Ms'] + \
     movie_frame['Orange Juice']*price_dict['Orange Juice']
 
+
+# shorten column names
+movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips'})
+
 # Print details...
-print("---------------------------------------------------------")
 
 print(movie_frame)
