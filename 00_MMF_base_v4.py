@@ -54,6 +54,7 @@ def int_check(question):
 def check_tickets(tickets_sold, ticket_limit):
     # tell user that only one seat is left!
     if tickets_sold < ticket_limit - 1:
+        print()
         print("You have {} seats "
               "left".format(ticket_limit - tickets_sold))
     # Warns user that only one seat is left!
@@ -281,7 +282,7 @@ movie_data_dict = {
     'Ticket': all_tickets
 }
 
-# Ask user if they have ujsed the program before & show instruction
+# Ask user if they have used the program before & show instruction
 
 # Loop to get ticket details
 while name != "xxx" and ticket_count < MAX_TICKETS:
@@ -291,9 +292,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
        # Get details ...
 
-
-        # Get name (can't be blank)
-        name = not_blank("Name:", "Sorry - this can't be blank, please enter your name")
+          # ----- Get name (can't be blank) -----
+        name = not_blank("Name: ", "Sorry - this can't be blank, please enter your name")
 
         # end the loop if the exit code is entered
         if name == "xxx":
@@ -311,10 +311,35 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         # add name and ticket price to lists
         all_name.append(name)
         all_tickets.append(ticket_cost)
+# ---- End of tickets loop ----
 
 
-# End of tickets loop
+# ----- Loop to ask for snacks -----
+        # ask user if they want a snack
+        check_snack = "invalid choice"
+        while check_snack == "invalid choice":
+            want_snack = input("Do you want to order snacks ? ").lower()
 
+            check_snack = string_check(want_snack, yes_no)
+
+            if check_snack == "invalid choice":
+                print("Please enter yes / no ")
+
+        # If they say yes, ask what snacks they want (and add to our snacks)
+        if check_snack == "Yes":
+            get_order = get_snack()
+
+        else:
+            get_order = []
+
+        # Show snack order
+        print()
+        if len(get_order) == 0:
+            print("Snacks Ordered: None")
+
+        else:
+            print("Snacks Ordered:")
+            print(get_order)
 
 # Print details...
 movie_frame = pandas.DataFrame(movie_data_dict)
@@ -334,32 +359,7 @@ else:
             .format(ticket_count, MAX_TICKETS - ticket_count))
 
 
-# Loop to ask for snacks
-# ask user if they want a snack
-check_snack = "invalid choice"
-while check_snack == "invalid choice":
-    want_snack = input("Do you want to order snacks ? ").lower()
 
-    check_snack = string_check(want_snack, yes_no)
-
-    if check_snack == "invalid choice":
-        print("Please enter yes / no ")
-
-# If they say yes, ask what snacks they want (and add to our snacks)
-if check_snack == "Yes":
-    get_order = get_snack()
-
-else:
-    get_order = []
-
-# Show snack order
-print()
-if len(get_order) == 0:
-    print("Snacks Ordered: None")
-
-else:
-    print("Snacks Ordered:")
-    print(get_order)
 
     # calculate snack price
 
