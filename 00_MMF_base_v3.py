@@ -162,6 +162,8 @@ else:
 
     # Loop to ask for snacks
 
+
+
     # calculate snack price
 
     # ask for payment method (and apply surchange if necesary)
