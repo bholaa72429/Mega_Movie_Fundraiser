@@ -1,5 +1,6 @@
+import pandas
 
-
+# Function goes here
 # WARNING: The response is returned in Title case
 def string_check(choice, options):
 
@@ -24,3 +25,35 @@ def string_check(choice, options):
         return chosen
     else:
         return "invalid choice"
+
+# Main routine
+
+pay_method = [
+    ["cash", "ca"],
+    ["credit","cr"]
+]
+
+# loop until exit code
+name = ""
+while name != "xxx":
+    name = input("Name: ")
+    if name == "xxx":
+        break
+
+    # Ask for payment method
+    how_pay = "invalid choice"
+    while how_pay == "invalid choice":
+        how_pay = input("Please pick a payment method (cash \ credit)").lower()
+        how_pay = string_check(how_pay, pay_method)
+
+    # Ask for subtotal (for testing purposes)
+    subtotal = float(input("Sub total? $"))
+
+    if how_pay == "Credit":
+        surcharge = 0.05 * subtotal
+    else:
+        surcharge = 0
+
+    total = subtotal + surcharge
+
+    print("Name: {} | Subtotal: {:.2f} | Surcharge: ${:.2f} | Total Payable: ${:.2f}".format(name, subtotal, surcharge, total))
