@@ -281,6 +281,7 @@ ticket_sales = 0
 # Initialise lists (to make data-frame in due course)
 all_name = []
 all_tickets = []
+# snack lists
 popcorn = []
 mms = []
 pita_chips = []
@@ -292,6 +293,9 @@ snack_lists = [popcorn,mms, pita_chips, water, orange_juice]
 # store surcharge multiplier
 surcharge_multi_list = []
 
+# Lists to store summary data...
+summary_heading = ["Popcorn", "M&M's", "Pita Chips", "Water", "Orange Juice", "Sanck Profit", "Ticket Profit", "Total Profit"]
+summary_data = []
 
 # Data Frame Dictionary
 movie_data_dict = {
@@ -304,6 +308,13 @@ movie_data_dict = {
     'Orange Juice': orange_juice,
     'Surcharge_Multiplier': surcharge_multi_list
 }
+
+# Summary Dictionary
+summary_data_dict = {
+    'Item': summary_heading,
+    'Amount': summary_data
+}
+
 
 # Cost of each snack
 price_dict = {
@@ -418,6 +429,22 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
 # shorten column names
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ', 'Pita Chips': 'Chips', 'Surcharge_Multiplier': 'SM'})
 
+# Set up summary dataframe
+# populate snack items...
+for items in snack_lists:
+    # sum itms in each snack list
+    summary_data.append(sum(item))
+
+# Get snack profit
+# Get snack total from panda
+snack_total = movie_frame['Snacks'].sum()
+snack_profit = snack_total * 0.2
+summary_data.append(snack_profit)
+
+# calculate ticket profit...
+ticket_profit = ticket_sales - (5 * ticket_count)
+summary_data.append(ticket_profit)
+
 # Set up columns to be printed...
 pandas.set_option('display.max_columns', None)
 
@@ -432,9 +459,6 @@ else:
 
 print()
 
-# calculate ticket profit...
-ticket_profit = ticket_sales - (5 * ticket_count)
-print("Ticket profit: ${:.2f}".format(ticket_profit))
 
 # Tell user if they have unsold tickets ...
 if ticket_count == MAX_TICKETS:
