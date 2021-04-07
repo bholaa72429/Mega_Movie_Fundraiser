@@ -441,9 +441,13 @@ snack_total = movie_frame['Snacks'].sum()
 snack_profit = snack_total * 0.2
 summary_data.append(snack_profit)
 
-# calculate ticket profit...
+# Get Ticket profit and add to list
 ticket_profit = ticket_sales - (5 * ticket_count)
 summary_data.append(ticket_profit)
+
+# work out total profit and add to list
+total_profit = snack_profit + ticket_profit
+summary_data.append(total_profit)
 
 # Set up columns to be printed...
 pandas.set_option('display.max_columns', None)
