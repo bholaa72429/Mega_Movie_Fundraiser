@@ -23,7 +23,7 @@ def string_check(choice, options):
     else:
         return "invalid choice"
 
-def instuctions(options):
+def instructions(options):
     show_help = "invalid choice"
     while show_help == "invalid choice":
         show_help = input("Would you like to read the instructions? ").lower()
@@ -46,6 +46,6 @@ yes_no = [
 ]
 
 # Ask If instructions are needed
-instuctions(yes_no)
+instructions(yes_no)
 print()
 print("Program Launches ...")
