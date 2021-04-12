@@ -234,7 +234,7 @@ pay_method = [
 ]
 
 # initialise loop so that it runs at least once
-MAX_TICKETS = 5
+MAX_TICKETS = 150
 
 name = ""
 ticket_count = 0
@@ -256,7 +256,7 @@ snack_lists = [popcorn,mms, pita_chips, water, orange_juice]
 surcharge_multi_list = []
 
 # Lists to store summary data...
-summary_heading = ["Popcorn", "M&Ms", "Pita Chips", "Water", "Orange Juice", "Sanck Profit", "Ticket Profit", "Total Profit"]
+summary_heading = ["Popcorn", "M&Ms", "Pita Chips", "Water", "Orange Juice", "Snack Profit", "Ticket Profit", "Total Profit"]
 summary_data = []
 
 # Data Frame Dictionary
@@ -422,7 +422,7 @@ summary_frame.to_csv("snack_summary.csv")
 
 print()
 print("*** Ticket / Snack Information ***")
-print("Note: for full details, please see the excel file called ")
+print("Note: for full details, please see the excel file called 'tickets_details' ")
 print()
 print(movie_frame[['Ticket', 'Sub Total','Surcharge', 'Total']])
 
