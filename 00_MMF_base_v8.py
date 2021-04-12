@@ -214,9 +214,10 @@ def instructions(options):
     if show_help == "Yes":
         print()
         print("^^^^Mega Movie Fundraiser Instructions^^^^")
-        print()
-        print("--Welcome to MMF -- ")
-        print("This is a platform which allows you to purchases your movie tickets and pre-order your snacks")
+        print("----------------------------------------------")
+        print("-->This is a platform which allows you to purchases your movie tickets and pre-order your snacks. \n")
+        print("-->You need to enter you name,age,snacks wanted and payment method preferred. \n ")
+        print("--> To finish your purchase enter 'xxx' and yoou will be provided with the details.\n")
 
     return ""
 
